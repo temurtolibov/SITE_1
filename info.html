@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Tour</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#F2EAE1]">
+    <div class="flex">
+      <div class="w-[20%] relative">
+        <div class="sticky top-0">
+          <img
+            class="pt-[18px] pl-[25px]"
+            src="./images/main-logo.png"
+            alt="students logo"
+            width="183"
+            height="24"
+          />
+          <label class="inline-block flex justify-center mt-[54px] mb-[18px]">
+            <input id="add-choose-img" class="hidden" type="file" />
+            <img
+              id="previewImage"
+              class="rounded-full"
+              src="./images/madesh-img.png"
+              alt="photo"
+              width="128"
+              height="128"
+            />
+          </label>
+          <span
+            class="username font-bold text-[17px] leading-[21px] flex justify-center"
+            >Karthi Madesh</span
+          >
+          <strong
+            class="font-medium text-[14px] leading-[17px] text-[#FEAF00] flex justify-center pt-[10px]"
+            >Admin</strong
+          >
+
+          <button
+            onclick="handleStudentPanelBtnClick()"
+            class="flex justify-center items-center rounded-[4px] py-[12px] bg-[#FEAF00] w-[193px] items-center gap-[15px] mx-auto mt-[63px]"
+          >
+            <img
+              src="./images/magistr-icon.svg"
+              alt="student icon"
+              width="20"
+              height="12"
+            />
+            Students</button
+          ><button
+            class="flex justify-center items-center gap-[23px] mx-auto mt-[284px] pb-[23px]"
+          >
+            <a href="./index.html">Logout</a>
+            <img
+              src="./images/logout-icon.svg"
+              alt="logout icon"
+              width="17"
+              height="17"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="w-[80%] pt-[12px]">
+        <div class="flex justify-between items-center pl-[30px]">
+          <img
+            src="./images/next-icon.svg"
+            alt="next icon"
+            width="17"
+            height="17"
+          />
+          <div class="flex gap-[27px] pr-[51px]">
+            <img
+              src="./images/notification-icon.svg"
+              alt="notification icon"
+              width="17"
+              height="20"
+            />
+          </div>
+        </div>
+        <div class="bg-slate-100 h-[94vh]">
+          <div
+            class="flex justify-between items-center py-[12px] px-[42px] mt-[11px] border-b-[1px] border-black-500"
+          >
+            <h1 class="user font-bold text-[22px] leading-[27px]">Kadesh</h1>
+          </div>
+          <div class="student-info"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/info.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>

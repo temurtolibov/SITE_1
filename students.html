@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Tour</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#F2EAE1]">
+    <div class="flex">
+      <div class="w-[20%] relative">
+        <div class="sticky top-0">
+          <img
+            class="pt-[18px] pl-[25px]"
+            src="./images/main-logo.png"
+            alt="students logo"
+            width="183"
+            height="24"
+          />
+          <label class="inline-block flex justify-center mt-[54px] mb-[18px]">
+            <input id="add-choose-img" class="hidden" type="file" />
+            <img
+              id="previewImage"
+              class="rounded-full"
+              src="./images/madesh-img.png"
+              alt="photo"
+              width="128"
+              height="128"
+            />
+          </label>
+          <span
+            class="username font-bold text-[17px] leading-[21px] flex justify-center"
+            >Karthi Madesh</span
+          >
+          <strong
+            class="font-medium text-[14px] leading-[17px] text-[#FEAF00] flex justify-center pt-[10px]"
+            >Admin</strong
+          >
+          <button
+            class="flex justify-center items-center rounded-[4px] py-[12px] bg-[#FEAF00] w-[193px] items-center gap-[15px] mx-auto mt-[63px]"
+          >
+            <img
+              src="./images/magistr-icon.svg"
+              alt="student icon"
+              width="20"
+              height="12"
+            />Students</button
+          ><button
+            class="flex justify-center items-center gap-[23px] mx-auto mt-[284px] pb-[23px]"
+          >
+            <a class="flex items-center gap-5" href="./index.html"
+              >Logout
+              <img
+                src="./images/logout-icon.svg"
+                alt="logout icon"
+                width="17"
+                height="17"
+              />
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="w-[80%] pt-[12px]">
+        <div class="flex justify-between items-center pl-[30px]">
+          <img
+            src="./images/next-icon.svg"
+            alt="next icon"
+            width="17"
+            height="17"
+          />
+          <div class="flex gap-[27px] pr-[51px]">
+            <label
+              class="w-[252px] flex justify-between py-[11px] pl-[34px] pr-[25px] rounded-[8px] bg-white shadow shadow-lg"
+            >
+              <input
+                class="search-input"
+                class="w-[212px]"
+                type="text"
+                placeholder="Search..."
+              />
+              <img
+                class="bg-white"
+                src="./images/search-cion.svg"
+                alt="search icon"
+                width="14"
+                height="14"
+              />
+            </label>
+            <img
+              src="./images/notification-icon.svg"
+              alt="notification icon"
+              width="17"
+              height="20"
+            />
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex justify-between items-center py-[12px] px-[30px] bg-white mt-[11px]"
+          >
+            <h1 class="font-bold text-[22px] leading-[27px]">Student List</h1>
+            <div class="flex gap-[30px] items-center">
+              <img
+                class="sort-part"
+                class="cursor-pointer"
+                src="./images/sort-icon.svg"
+                alt="sort icon"
+                width="14"
+                height="22"
+              />
+              <button
+                onclick="handleAddBtnClick()"
+                class="w-[199px] uppercase text-center py-[13px] text-white text-[14px] leading-[17px] font-medium bg-[#FEAF00] rounded-[4px]"
+              >
+                Add new Student
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#f9f9f9] pb-[10px] shadow">
+          <table class="w-[1170px] mx-[30px]">
+            <thead>
+              <tr
+                class="text-left bg-[#f9f9f9] text-[#ACACAC] text-[12px] font-semibold leading-[15px] sticky top-0"
+              >
+                <th class="pl-12 py-3">Name</th>
+                <th class="px-6 py-3">Email</th>
+                <th class="px-6 py-3">Phone</th>
+                <th class="px-6 py-3">Enroll Number</th>
+                <th class="px-6 py-3">Date admission</th>
+              </tr>
+            </thead>
+            <tbody class="student-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="wrapper"
+      class="modal-wrapper fixed scale-0 duration-300 inset-0 bg-[#00000049] backdrop-blur flex items-center justify-center"
+    >
+      <div
+        class="modal-inner absolute w-[1000px] py-[40px] bg-white rounded-[25px]"
+      ></div>
+    </div>
+    <script src="./js/students.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
